@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Booking Services | Fragela CS</title>
+
+    <link rel="stylesheet" href="assets/css/globals.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        outline: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrapperd z-[1] relative w-full h-full">
+      <section class="relative w-full h-full z-[1] fragelaServices">
+        <header
+          class="flex items-center py-3 px-5 sm:px-10 bg-white/40 backdrop-blur-sm min-h-[65px] tracking-wide relative z-50"
+        >
+          <div
+            class="flex items-center justify-between gap-4 mx-auto h-full w-full"
+          >
+            <a href="index.html" class="max-lg:!block hidden w-32">
+              <img
+                src="assets/images/fragelacsLogo.svg"
+                class="img-fluid w-16"
+                alt=""
+              />
+            </a>
+
+            <div
+              id="collapseMenu"
+              class="max-lg:hidden lg:!block max-lg:w-full lg:w-[47%] max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50"
+            >
+              <button
+                id="toggleClose"
+                class="lg:hidden fixed top-6 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-3.5 h-3.5 fill-slate-900"
+                  viewBox="0 0 320.591 320.591"
+                >
+                  <path
+                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                    data-original="#000000"
+                  ></path>
+                  <path
+                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                    data-original="#000000"
+                  ></path>
+                </svg>
+              </button>
+
+              <ul
+                class="lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-2/3 max-lg:min-w-[320px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-[45vh] max-lg:shadow-md max-lg:overflow-auto z-50"
+              >
+                <li class="mb-4 hidden max-lg:block">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/fragelacsLogo.svg"
+                      alt="logo"
+                      class="w-16"
+                    />
+                  </a>
+                </li>
+                <li class="max-lg:py-3 px-3">
+                  <a
+                    href="index.html"
+                    class="font-medium lg:hover:text-blue-700 text-blue-700 block text-[15px]"
+                    >Home</a
+                  >
+                </li>
+
+                <li class="max-lg:py-3 px-3">
+                  <a
+                    href="about-us.html"
+                    class="font-medium lg:hover:text-blue-700 text-slate-900 block text-[15px]"
+                    >About Us</a
+                  >
+                </li>
+
+                <li class="max-lg:py-3 px-3">
+                  <a
+                    href="our-services.html"
+                    class="font-medium lg:hover:text-blue-700 text-slate-900 block text-[15px]"
+                    >Our Services</a
+                  >
+                </li>
+
+                <li class="max-lg:py-3 px-3">
+                  <a
+                    href="prices.html"
+                    class="font-medium lg:hover:text-blue-700 text-slate-900 block text-[15px]"
+                    >Our Prices</a
+                  >
+                </li>
+                <li class="max-lg:py-3 px-3">
+                  <a
+                    href="javascript:void(0)"
+                    class="font-medium lg:hover:text-blue-700 text-slate-900 block text-[15px]"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="hidden lg:flex items-center justify-center">
+              <a href="index.html" class="hidden lg:block"
+                ><img
+                  src="assets/images/fragelacsLogo.svg"
+                  alt="logo"
+                  class="w-16"
+                />
+              </a>
+            </div>
+
+            <div class="flexy gap-4 ml-auto">
+              <div class="flex items-center space-x-3">
+                <a
+                  href="javascript:void(0)"
+                  class="!hidden lg:!flex items-center justify-center bg-[#FF2768] rounded-full w-8 h-8 p-2 !text-white"
+                >
+                  <i class="ri-search-line"></i>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="!hidden lg:!block flexy bg-[#FF2768] rounded-full w-8 h-8 p-2 !text-white"
+                >
+                  <img
+                    src="assets/images/bucket.svg"
+                    class="img-fluid w-5"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="!hidden lg:!block flexy bg-[#FF2768] rounded-full w-8 h-8 p-2 !text-white"
+                >
+                  <img
+                    src="assets/images/user.svg"
+                    class="img-fluid w-5"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="contact-us.html"
+                  class="flexy gap-x-2 bg-black rounded-full py-2 px-3"
+                >
+                  <span class="text-[15px] text-white">Contact Us</span>
+                  <div class="flexy rounded-full w-7 h-7 bg-white">
+                    <i class="ri-link"></i>
+                  </div>
+                </a>
+              </div>
+
+              <button id="toggleOpen" class="lg:hidden">
+                <svg
+                  class="w-7 h-7"
+                  fill="#000"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div
+          class="flexy relative w-full h-full px-5 sm:px-10 py-6 lg:py-10 z-10"
+        >
+          <div class="grid grid-cols-12 mx-auto w-full h-full gap-6 lg:gap-8">
+            <div class="col-span-12 lg:col-span-7 relative w-full h-full flexy">
+              <div class="w-full h-full">
+                <img src="assets/images/exra.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div
+              class="col-span-12 lg:col-span-5 relative w-full h-full max-lg:pt-6 lg:pl-2"
+            >
+              <div class="itemStart flex-col w-full space-y-5">
+                <div
+                  class="itemStart flex-col w-full space-y-0 uppercase text-5xl lg:text-7xl"
+                >
+                  <h1 class="grifter">Appartment</h1>
+                  <h1 class="grifter">cleaning</h1>
+                </div>
+
+                <div class="itemStart flex-col w-full space-y-2">
+                  <h2 class="grifter text-3xl uppercase">important</h2>
+                  <p class="text-lg md:w-11/12">
+                    The selection of month, day and time corresponds to the
+                    first visit, then you must coordinate with the service
+                    provider.
+                  </p>
+                </div>
+
+                <form class="itemStart flex-col w-full space-y-5 lg:space-y-8">
+                  <div
+                    class="selectiveGroup itemStart flex-col w-full space-y-8"
+                  >
+                    <div
+                      class="selectiveGroup itemStart flex-col w-full space-y-5"
+                    >
+                      <div
+                        class="w-full flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-between"
+                      >
+                        <label class="grifter text-xl max-lg:pb-2" for="month"
+                          >Select Month</label
+                        >
+                        <select
+                          name="month"
+                          id="month"
+                          class="py-2.5 pl-3 pr-8 bg-gray-200 w-full lg:w-2/3 rounded-lg appearance-none border-none inline-block leading-tight"
+                        >
+                          <option class="pt-6">Choose An Option...</option>
+                          <option value="january">January</option>
+                          <option value="february">February</option>
+                          <option value="march">March</option>
+                          <option value="april">April</option>
+                          <option value="may">May</option>
+                          <option value="june">June</option>
+                          <option value="july">July</option>
+                          <option value="august">August</option>
+                          <option value="september">September</option>
+                          <option value="october">October</option>
+                          <option value="november">November</option>
+                          <option value="december">December</option>
+                        </select>
+                        <div
+                          class="pointer-events-none absolute right-0 hidden lg:flex items-center px-2 text-4xl"
+                        >
+                          <i class="ri-arrow-drop-down-line"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="w-full flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-between"
+                      >
+                        <label class="grifter text-xl max-lg:pb-2" for="day"
+                          >Select Day</label
+                        >
+                        <select
+                          id="day"
+                          name="day"
+                          class="py-2.5 pl-3 pr-8 bg-gray-200 w-full lg:w-2/3 rounded-lg appearance-none border-none inline-block leading-tight"
+                        >
+                          <option class="pt-6">Choose An Option...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                        </select>
+                        <div
+                          class="pointer-events-none absolute right-0 hidden lg:flex items-center px-2 text-4xl"
+                        >
+                          <i class="ri-arrow-drop-down-line"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="w-full flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-between"
+                      >
+                        <label class="grifter text-xl max-lg:pb-2" for="hours"
+                          >Select Hours</label
+                        >
+                        <select
+                          id="hours"
+                          name="hours"
+                          class="py-2.5 pl-3 pr-8 bg-gray-200 w-full lg:w-2/3 rounded-lg appearance-none border-none inline-block leading-tight"
+                        >
+                          <option class="pt-6">Choose An Option...</option>
+                          <option value="001">001</option>
+                          <option value="002">002</option>
+                          <option value="003">003</option>
+                          <option value="004">004</option>
+                          <option value="005">005</option>
+                          <option value="006">006</option>
+                          <option value="007">007</option>
+                          <option value="008">008</option>
+                          <option value="009">009</option>
+                          <option value="010">010</option>
+                          <option value="011">011</option>
+                          <option value="012">012</option>
+                          <option value="013">013</option>
+                          <option value="014">014</option>
+                          <option value="015">015</option>
+                          <option value="016">016</option>
+                          <option value="017">017</option>
+                          <option value="018">018</option>
+                          <option value="019">019</option>
+                          <option value="020">020</option>
+                          <option value="021">021</option>
+                          <option value="022">022</option>
+                          <option value="023">023</option>
+                          <option value="024">024</option>
+                        </select>
+                        <div
+                          class="pointer-events-none absolute right-0 hidden lg:flex items-center px-2 text-4xl"
+                        >
+                          <i class="ri-arrow-drop-down-line"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="w-full flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-between"
+                      >
+                        <label
+                          class="grifter text-xl max-lg:pb-2"
+                          for="freqMonth"
+                          >Select Frequency</label
+                        >
+                        <select
+                          id="freqMonth"
+                          name="freqMonth"
+                          class="py-2.5 pl-3 pr-8 bg-gray-200 w-full lg:w-2/3 rounded-lg appearance-none border-none inline-block leading-tight"
+                        >
+                          <option class="pt-6">Choose An Option...</option>
+                          <option value="oneMonth">One Month</option>
+                          <option value="twoMonth">Two Month</option>
+                          <option value="threeMonth">Three Month</option>
+                          <option value="fourMonth">Four Month</option>
+                          <option value="fiveMonth">Five Month</option>
+                          <option value="sixMonth">Six Month</option>
+                        </select>
+                        <div
+                          class="pointer-events-none absolute right-0 hidden lg:flex items-center px-2 text-4xl"
+                        >
+                          <i class="ri-arrow-drop-down-line"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="itemStart w-full">
+                      <h1 class="text-3xl grifter">
+                        $184 <span class="text-lg text-[#FF2768]">$15.10</span>
+                      </h1>
+                    </div>
+
+                    <div class="itemStart w-full">
+                      <div
+                        class="flex items-start justify-start lg:items-center lg:justify-center flex-wrap space-x-4 space-y-3"
+                      >
+                        <a
+                          href="javascript:void(0)"
+                          class="grifter uppercase bg-[#FF2768] py-3 px-8 !text-white rounded-full"
+                          >add to cart</a
+                        >
+                        <a
+                          href="javascript:void(0)"
+                          class="grifter uppercase bg-[#FF2768] py-3 px-8 !text-white rounded-full"
+                          >continue</a
+                        >
+                        <div class="flexy text-4xl">
+                          <i class="ri-poker-hearts-line"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="newsLettSec relative w-full h-full text-white bg-[#FF2768]"
+      >
+        <div class="hidden md:block absolute md:top-16 md:left-10">
+          <img
+            src="assets/images/whiteStar.svg"
+            class="img-fluid w-40"
+            alt=""
+          />
+        </div>
+        <div class="hidden md:block absolute md:bottom-16 md:right-10">
+          <img
+            src="assets/images/whiteStar.svg"
+            class="img-fluid w-40"
+            alt=""
+          />
+        </div>
+
+        <div class="absolute max-lg:bottom-32 left-4 md:top-32 md:left-52">
+          <img src="assets/images/whiteStar.svg" class="img-fluid w-8" alt="" />
+        </div>
+
+        <div class="absolute bottom-32 right-4 md:right-52">
+          <img src="assets/images/whiteStar.svg" class="img-fluid w-8" alt="" />
+        </div>
+
+        <div class="absolute max-lg:top-10 left-2 md:bottom-20 md:left-23">
+          <img
+            src="assets/images/whiteStar.svg"
+            class="img-fluid w-14"
+            alt=""
+          />
+        </div>
+
+        <div class="absolute top-5 md:top-20 right-3 md:right-23">
+          <img
+            src="assets/images/whiteStar.svg"
+            class="img-fluid w-14"
+            alt=""
+          />
+        </div>
+
+        <div class="relative py-5 w-full h-full px-5 sm:px-10">
+          <div class="py-10 w-full flexy flex-col w-full relative space-y-3">
+            <div
+              class="flexy flex-col text-center uppercase space-y-1 text-5xl lg:text-7xl"
+            >
+              <h1 class="grifter">join our</h1>
+              <h1 class="grifter">newsletter</h1>
+            </div>
+            <div class="flexy text-center">
+              <p>Sign up for deals, new products and promotions</p>
+            </div>
+
+            <div class="relative flexy w-full pt-2 group lg:w-1/2">
+              <div class="relative w-full lg:w-11/12 flex items-center">
+                <input
+                  placeholder="Verify Your Product..."
+                  type="text"
+                  class="peer relative py-3 w-full placeholder:text-gray-500 rounded-full bg-gray-100 pl-5 pr-20 outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-[#fff] focus:drop-shadow-lg text-md text-black"
+                />
+                <button
+                  class="absolute right-1 py-2 px-6 rounded-full bg-gray-800 text-md font-semibold text-white transition-all duration-200 ease-in-out group-focus-within:bg-black group-focus-within:hover:bg-black cursor-pointer"
+                >
+                  Verify Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="relative w-full h-full fragelaFooter">
+        <div class="w-full h-full relative">
+          <div class="w-full h-full itemStart flex-col text-white">
+            <div
+              class="py-10 w-full h-full relative bg-black flex flex-col lg:flex-row items-start justify-start lg:justify-between max-lg:px-5 sm:pl-10 gap-5"
+            >
+              <div class="itemStart flex-col space-y-6">
+                <a href="index.html" class="">
+                  <img
+                    src="assets/images/textLogo.svg"
+                    class="img-fluid w-36 lg:w-72"
+                    alt=""
+                  />
+                </a>
+
+                <div class="itemStart lg:w-1/2">
+                  <p>
+                    Posuere sollicitudin aliquam ultrices sagittis orci a
+                    scelerisque. Massa placerat duis ultricies lacus turpis.
+                    pellentesque habitant morbil. Posuere sollicitudin aliquam
+                    ultrices sagittis orci a scelerisque. Massa placerat
+                  </p>
+                </div>
+
+                <div class="itemStart flex-col space-y-4 pt-8">
+                  <h2 class="text-[#FF2768] grifter text-3xl">Contact Info</h2>
+                  <a href="mailto:fragelacleaningservice@yahoo.com" class=""
+                    >Email: fragelacleaningservice@yahoo.com</a
+                  >
+                  <a href="tel:7085426044" class="">Phone: (702) 542-6044</a>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col lg:flex-row items-start justify-start lg:justify-end gap-5 w-full max-lg:px-5 sm:pr-10 lg:gap-x-20 max-lg:gap-y-5"
+              >
+                <div class="itemStart flex-col space-y-6">
+                  <h2 class="text-[#FF2768] grifter text-3xl">Quick Link</h2>
+
+                  <ul class="itemStart text-white flex-col space-y-4">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="javascript:void(0)">Contact Us</a></li>
+                  </ul>
+                </div>
+
+                <div class="itemStart flex-col space-y-6">
+                  <h2 class="text-[#FF2768] grifter text-3xl">Our Services</h2>
+
+                  <ul
+                    class="itemStart text-white flex-col space-y-3 list-disc list-outside pl-4"
+                  >
+                    <li><a href="javascript:void(0)">Apartment Cleaning</a></li>
+                    <li><a href="javascript:void(0)">Detailed Cleaning</a></li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        >Enhanced Desinfection Services</a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">Holiday Cleaning</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">House Cleaning</a>
+                    </li>
+                    <li><a href="javascript:void(0)">House Keeping</a></li>
+                    <li>
+                      <a href="javascript:void(0)">Move In / Out Cleaning</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        >Post-Construction / Remodel Cleaning</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pt-4 relative bg-[#FF2768] w-full h-full flex flex-col lg:flex-row items-start justify-start lg:justify-between px-5 sm:px-10 space-y-5"
+            >
+              <div class="flex pt-2">
+                © 2024 fragelacleaning, All Rights Reserved.
+              </div>
+
+              <div class="pt-2 flex flex-col lg:flex-row space-y-2 lg:gap-x-10">
+                <a href="javascript:void(0)">Privacy Policy</a>
+                <a href="javascript:void(0)">Term of Use</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
