@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'Grifter-Bold';
+  src: url('/assets/fonts/grifterbold.ttf') format(truetype);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+.grifter {
+  font-family: 'Grifter-Bold';
+  font-weight: bold;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* most used Classes */
+
+.flexy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemStart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.justStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.justCenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* patterns */
