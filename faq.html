@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Fragela CS | Home</title>
+    <title>Frequently Asked Questions | Fragela CS</title>
 
     <link rel="stylesheet" href="assets/css/globals.css" />
     <link rel="stylesheet" href="assets/css/slick.css" />
@@ -24,12 +24,102 @@
         box-sizing: border-box;
         outline: none;
       }
+
+      .accordion .accordion-item {
+        border-bottom: 1px solid #5e5e5e;
+      }
+      .accordion .accordion-item button[aria-expanded='true'] {
+        border-bottom: 1px solid #ff2768;
+      }
+      .accordion button {
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 1em 0;
+        color: #242527;
+        font-size: 1.15rem;
+        font-weight: 400;
+        border: none;
+        background: none;
+        outline: none;
+      }
+      .accordion button:hover,
+      .accordion button:focus {
+        cursor: pointer;
+        color: #ff2768;
+      }
+      .accordion button:hover::after,
+      .accordion button:focus::after {
+        cursor: pointer;
+        color: #ff2768;
+        border: 1px solid #ff2768;
+      }
+      .accordion button .accordion-title {
+        padding: 1em 1.5em 1em 0;
+      }
+      .accordion button .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 4px;
+        background-color: #ff2768;
+        color: #fff;
+      }
+      .accordion button .icon::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+      .accordion button .icon::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+      .accordion button[aria-expanded='true'] {
+        color: #ff2768;
+      }
+      .accordion button[aria-expanded='true'] .icon::after {
+        width: 0;
+      }
+      .accordion button[aria-expanded='true'] + .accordion-content {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+      }
+      .accordion .accordion-content {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, max-height 200ms linear;
+        will-change: opacity, max-height;
+      }
+      .accordion .accordion-content p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 2em 0;
+      }
     </style>
   </head>
 
   <body>
     <main class="wrapperd z-[1] relative w-full h-full">
-      <section class="relative w-full h-full z-[1] fragelaHero">
+      <section class="relative w-full h-full z-[1] faqFragela">
         <header
           class="flex items-center py-3 px-5 sm:px-10 bg-white/40 backdrop-blur-sm min-h-[65px] tracking-wide relative z-50"
         >
@@ -189,8 +279,8 @@
         </header>
 
         <div
-          class="absolute top-0 w-full h-screen bg-cover bg-no-repeat lg:bg-center"
-          style="background-image: url('/assets/images/homeCleaning.png')"
+          class="absolute top-0 w-full h-screen bg-cover bg-no-repeat max-lg:bg-position-[19%] lg:bg-center"
+          style="background-image: url('/assets/images/faqOverlay.png')"
         ></div>
 
         <div class="relative w-full h-[80vh] lg:h-[80vh] px-5 sm:px-10">
@@ -203,8 +293,9 @@
               <div
                 class="itemStart flex-col space-y-0 uppercase text-5xl lg:text-7xl"
               >
-                <h1 class="grifter">cleaning</h1>
-                <h1 class="grifter">services</h1>
+                <h1 class="grifter">Frequently</h1>
+                <h1 class="grifter">asked</h1>
+                <h1 class="grifter">Questions</h1>
               </div>
               <div class="itemStart lg:w-1/4">
                 <p>
@@ -271,402 +362,231 @@
         </div>
       </section>
 
-      <section class="relative w-full h-full aboutFragela">
-        <div class="relative w-full h-full px-5 sm:px-10 max-lg:pt-10">
+      <section class="relative w-full h-full faqSect">
+        <div
+          class="relative flexy w-full h-full px-5 max-lg:mt-20 lg:mt-12 sm:px-10"
+        >
           <div
-            class="relative flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-5 py-5"
+            class="flexy flex-col w-full h-full py-10 lg:my-10 max-lg:mb-14 space-y-10 lg:space-y-20"
           >
-            <div class="flexy w-full h-full lg:w-1/2 pt-14">
-              <div class="relative flexy md:pt-10">
-                <img
-                  src="assets/images/home-about.png"
-                  class="img-fluid"
-                  alt=""
-                />
-
-                <div class="hidden lg:block absolute -right-16 top-28 z-10">
-                  <img
-                    src="assets/images/pinkStar.svg"
-                    class="img-fluid w-[140px]"
-                    alt=""
-                  />
-                </div>
-
-                <div class="absolute -left-10 -bottom-8 z-10">
-                  <img
-                    src="assets/images/blueStar.svg"
-                    class="img-fluid w-[80px]"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="relative flexy h-full w-full lg:w-1/2 max-lg:pt-5">
-              <div class="itemStart w-full flex-col space-y-5 lg:w-4/5">
-                <div
-                  class="itemStart flex-col space-y-0 uppercase text-5xl lg:text-7xl w-full"
-                >
-                  <h1 class="grifter">about</h1>
-                  <h1 class="grifter">fragela</h1>
-                  <h1 class="grifter">cleaning</h1>
-                </div>
-
-                <div class="itemStart">
-                  <p>
-                    We are Fragela Cleaning, with more than 10 years of
-                    experience, we have a great team of cleaning and order
-                    professionals.
-                  </p>
-                </div>
-
-                <div class="itemStart">
-                  <p>
-                    Our home cleaning services cover every inch of your space.
-                    We can renovate your bathroom, revitalize your kitchen, and
-                    restore your bedroom to ensure you have the beautiful, clean
-                    home you deserve. We’ll get deep into the nooks and crannies
-                    to remove dust, germs, and bacteria from your space and give
-                    you a spotless, healthy home.
-                  </p>
-                </div>
-
-                <div class="itemStart">
-                  <a
-                    href="javascript:void(0)"
-                    class="rounded-full !text-white text-lg py-2 px-8 bg-[#FF2768]"
-                    >Contact Us</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="chooss relative w-full h-full">
-        <div class="relative w-full h-full px-5 sm:px-10">
-          <div
-            class="relative flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-5 py-5"
-          >
-            <div class="relative flexy h-full w-full lg:w-1/2">
-              <div class="itemStart w-full flex-col space-y-5 lg:w-4/5">
-                <div
-                  class="itemStart flex-col space-y-0 uppercase text-5xl lg:text-7xl w-full"
-                >
-                  <h1 class="grifter">why</h1>
-                  <h1 class="grifter">choose</h1>
-                  <h1 class="grifter">us?</h1>
-                </div>
-
-                <div class="itemStart">
-                  <p>
-                    We are Fragela Cleaning, with more than 10 years of
-                    experience, we have a great team of cleaning and order
-                    professionals.
-                  </p>
-                </div>
-
-                <div class="itemStart">
-                  <p>
-                    Our home cleaning services cover every inch of your space.
-                    We can renovate your bathroom, revitalize your kitchen, and
-                    restore your bedroom to ensure you have the beautiful, clean
-                    home you deserve. We’ll get deep into the nooks and crannies
-                    to remove dust, germs, and bacteria from your space and give
-                    you a spotless, healthy home.
-                  </p>
-                </div>
-
-                <div class="itemStart">
-                  <a
-                    href="javascript:void(0)"
-                    class="rounded-full !text-white text-lg py-2 px-8 bg-[#FF2768]"
-                    >Contact Us</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="flexy w-full h-full lg:w-1/2 md:p-8">
-              <div class="relative bluePatt flexy md:py-5">
-                <div class="relative flexy w-full h-full">
-                  <img
-                    src="assets/images/bluePat.svg"
-                    class="img-fluid"
-                    alt=""
-                  />
+            <div class="grid grid-cols-12 mx-auto gap-6 w-full h-full">
+              <div
+                class="col-span-12 lg:col-span-6 relative w-full h-full justStart"
+              >
+                <div class="justCenter flex-col space-y-7 w-full h-full">
                   <div
-                    class="absolute top-28 lg:right-10 overflow-auto w-full h-full z-10"
+                    class="itemStart flex-col space-y-1 text-5xl lg:text-8xl"
+                  >
+                    <h1 class="grifter">General</h1>
+                    <h1 class="grifter">Questions</h1>
+                  </div>
+                  <div class="itemStart lg:w-4/5">
+                    <p>
+                      We know you may have questions about our services, and
+                      we’re here to help! Below are some of the most common
+                      questions our customers ask.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-span-12 max-lg:mt-10 lg:col-span-6 relative w-full h-full itemStart"
+              >
+                <div class="w-full h-full relative p-5 bg-gray-300 rounded-lg">
+                  <div
+                    class="absolute w-16 h-16 max-lg:-top-10 lg:-top-5 max-lg:-left-5 lg:-left-10 z-10"
                   >
                     <img
-                      src="assets/images/fragVan.png"
+                      src="assets/images/pinkStar.svg"
                       class="img-fluid"
                       alt=""
                     />
                   </div>
-                </div>
+                  <div
+                    class="absolute w-10 h-10 -bottom-5 right-0 lg:-right-5 z-10"
+                  >
+                    <img
+                      src="assets/images/blueStar.svg"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
 
-                <div class="hidden lg:block absolute -left-20 top-28 z-10">
-                  <img
-                    src="assets/images/pinkStar.svg"
-                    class="img-fluid w-[140px]"
-                    alt=""
-                  />
+                  <div class="accordion">
+                    <div class="accordion-item">
+                      <button id="accordion-button-1" aria-expanded="true">
+                        <span class="accordion-title"
+                          >What areas do you serve?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          We proudly provide cleaning services in Las Vegas,
+                          Nevada, and surrounding areas.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button id="accordion-button-2" aria-expanded="false">
+                        <span class="accordion-title">Are you insured?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          We proudly provide cleaning services in Las Vegas,
+                          Nevada, and surrounding areas.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button id="accordion-button-3" aria-expanded="false">
+                        <span class="accordion-title"
+                          >Do I need to provide cleaning supplies and
+                          equipment?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          We proudly provide cleaning services in Las Vegas,
+                          Nevada, and surrounding areas.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button id="accordion-button-4" aria-expanded="false">
+                        <span class="accordion-title"
+                          >Do you use eco-friendly cleaning products?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          We proudly provide cleaning services in Las Vegas,
+                          Nevada, and surrounding areas.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button id="accordion-button-5" aria-expanded="false">
+                        <span class="accordion-title"
+                          >Do I need to be home during the cleaning?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          We proudly provide cleaning services in Las Vegas,
+                          Nevada, and surrounding areas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="relative w-full h-full ourTeam">
-        <div class="relative w-full h-full sm:px-10">
-          <div class="flexy w-full h-full relative py-5 min-h-[500px]">
-            <img
-              src="assets/images/ourTeam.png"
-              class="img-fluid w-full h-full object-cover min-h-[500px]"
-              alt=""
-            />
 
             <div
-              class="absolute flexy flex-col text-center space-y-4 text-white max-lg:px-5"
+              class="grid grid-cols-12 mx-auto gap-6 max-lg:mt-14 w-full h-full"
             >
-              <h1 class="grifter text-5xl lg:text-7xl uppercase">our team</h1>
-
-              <div class="flexy md:w-1/2">
-                <p>
-                  Our team of professional cleaners is fully trained, insured,
-                  and background-checked to ensure the safety and security of
-                  our clients' homes. We take pride in providing a reliable and
-                  trustworthy service. Our team is friendly, approachable, and
-                  always ready to go the extra mile to make sure our clients are
-                  satisfied.
-                </p>
-              </div>
-
-              <a
-                href="javascript:void(0)"
-                class="rounded-full text-lg !text-white py-2 px-8 bg-[#FF2768]"
-                >Contact Us</a
+              <div
+                class="col-span-12 lg:col-span-6 relative w-full h-full justStart"
               >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="serviceSlid relative w-full h-full">
-        <div class="relative w-full h-full px-5 sm:px-10">
-          <div class="flexy flex-col py-5 lg:py-10 space-y-8 w-full h-full">
-            <div class="w-full h-full flexy text-center text-5xl lg:text-6xl">
-              <h1 class="grifter uppercase">Our services</h1>
-            </div>
-
-            <div class="w-full relative mx-auto">
-              <div class="servSlider">
-                <div class="slickiest relative mx-2">
-                  <img src="assets/images/slid4.png" class="img-fluid" alt="" />
+                <div class="justCenter flex-col space-y-7 w-full h-full">
                   <div
-                    class="absolute bottom-0 itemStart flex-col p-8 text-4xl space-y-1 text-white"
+                    class="itemStart flex-col space-y-1 text-5xl lg:text-8xl"
                   >
-                    <h2 class="grifter">Apartment</h2>
-                    <h2 class="grifter">Cleaning</h2>
+                    <h1 class="grifter">Service</h1>
+                    <h1 class="grifter">& Booking</h1>
+                    <h1 class="grifter">Questions</h1>
                   </div>
-                </div>
-                <div class="slickiest relative mx-2">
-                  <img src="assets/images/slid3.png" class="img-fluid" alt="" />
-                  <div
-                    class="absolute bottom-0 itemStart flex-col p-8 text-4xl space-y-1 text-white"
-                  >
-                    <h2 class="grifter">Detailed</h2>
-                    <h2 class="grifter">Cleaning</h2>
-                  </div>
-                </div>
-                <div class="slickiest relative mx-2">
-                  <img src="assets/images/slid2.png" class="img-fluid" alt="" />
-                  <div
-                    class="absolute bottom-0 itemStart flex-col p-8 text-4xl space-y-1 text-white"
-                  >
-                    <h2 class="grifter">Enhanced</h2>
-                    <h2 class="grifter">Desinfection</h2>
-                    <h2 class="grifter">Services</h2>
-                  </div>
-                </div>
-                <div class="slickiest relative mx-2">
-                  <img src="assets/images/slid1.png" class="img-fluid" alt="" />
-                  <div
-                    class="absolute bottom-0 itemStart flex-col p-8 text-4xl space-y-1 text-white"
-                  >
-                    <h2 class="grifter">Holiday</h2>
-                    <h2 class="grifter">Cleaning</h2>
+                  <div class="itemStart lg:w-4/5">
+                    <p>
+                      We know you may have questions about our services, and
+                      we’re here to help! Below are some of the most common
+                      questions our customers ask.
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="sparkling relative w-full h-full">
-        <div class="relative mx-auto w-full h-full px-5 sm:px-10">
-          <div class="flexy flex-col w-full h-full space-y-8 py-10">
-            <div
-              class="flexy flex-col w-full text-center text-5xl lg:text-6xl uppercase"
-            >
-              <h1 class="grifter">sparkling clean</h1>
-              <h1 class="grifter">home gallery</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="testimonials relative w-full h-full">
-        <div class="relative mx-auto w-full h-full px-5 sm:px-10">
-          <div class="flexy flex-col space-y-8 py-10 w-full h-full">
-            <div
-              class="flexy w-full text-center text-5xl lg:text-6xl uppercase"
-            >
-              <h1 class="grifter">our reviews</h1>
-            </div>
-
-            <div class="relative w-full mx-auto">
-              <div class="reviewSlider pb-4">
-                <div class="slicki mx-2">
+              <div
+                class="col-span-12 max-lg:mt-10 lg:col-span-6 relative w-full h-full itemStart"
+              >
+                <div class="w-full h-full relative p-5 bg-gray-300 rounded-lg">
                   <div
-                    class="itemStart border border-gray-200 flex-col w-full rounded-xl p-4 space-y-5"
+                    class="absolute w-16 h-16 max-lg:-top-10 lg:-top-5 max-lg:-left-5 lg:-left-10 z-10"
                   >
-                    <div class="itemStart gap-x-1 text-yellow-500">
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                    </div>
-                    <div class="itemStart">
-                      <p>
-                        Posuere sollicitudin aliquam ultrices sagittis orci a
-                        scelerisque. Massa placerat duis ultricies lacus turpis.
-                        pellentesque habitant morbil. Posuere sollicitudin
-                        aliquam ultrices sagittis orci a scelerisque. Massa
-                        placerat
-                      </p>
-                    </div>
-                    <div class="itemStart pt-3">
-                      <div class="flexy gap-x-3">
-                        <img
-                          src="assets/images/kathleen.png"
-                          class="img-fluid w-16"
-                          alt=""
-                        />
-                        <div class="itemStart flex-col space-y-0">
-                          <h4 class="font-semibold text-lg">Kathleen Smith</h4>
-                          <span>Data quality manager</span>
-                        </div>
+                    <img
+                      src="assets/images/pinkStar.svg"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="absolute w-10 h-10 -bottom-5 right-0 lg:-right-5 z-10"
+                  >
+                    <img
+                      src="assets/images/blueStar.svg"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion-item">
+                      <button id="accordion-button-1" aria-expanded="true">
+                        <span class="accordion-title"
+                          >How do I schedule a cleaning service?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          You can book a cleaning by calling (702) 542-6044 or
+                          emailing us at
+                          <b>fragelacleaningservice@yahoo.com.</b>
+                        </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="slicki mx-2">
-                  <div
-                    class="itemStart border border-gray-200 flex-col w-full rounded-xl p-4 space-y-5"
-                  >
-                    <div class="itemStart gap-x-1 text-yellow-500">
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                    </div>
-                    <div class="itemStart">
-                      <p>
-                        Posuere sollicitudin aliquam ultrices sagittis orci a
-                        scelerisque. Massa placerat duis ultricies lacus turpis.
-                        pellentesque habitant morbil. Posuere sollicitudin
-                        aliquam ultrices sagittis orci a scelerisque. Massa
-                        placerat
-                      </p>
-                    </div>
-                    <div class="itemStart pt-3">
-                      <div class="flexy gap-x-3">
-                        <img
-                          src="assets/images/kathleen.png"
-                          class="img-fluid w-16"
-                          alt=""
-                        />
-                        <div class="itemStart flex-col space-y-0">
-                          <h4 class="font-semibold text-lg">Kathleen Smith</h4>
-                          <span>Data quality manager</span>
-                        </div>
+                    <div class="accordion-item">
+                      <button id="accordion-button-2" aria-expanded="false">
+                        <span class="accordion-title"
+                          >What’s included in a standard cleaning service?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          You can book a cleaning by calling (702) 542-6044 or
+                          emailing us at
+                          <b>fragelacleaningservice@yahoo.com.</b>
+                        </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="slicki mx-2">
-                  <div
-                    class="itemStart border border-gray-200 flex-col w-full rounded-xl p-4 space-y-5"
-                  >
-                    <div class="itemStart gap-x-1 text-yellow-500">
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                    </div>
-                    <div class="itemStart">
-                      <p>
-                        Posuere sollicitudin aliquam ultrices sagittis orci a
-                        scelerisque. Massa placerat duis ultricies lacus turpis.
-                        pellentesque habitant morbil. Posuere sollicitudin
-                        aliquam ultrices sagittis orci a scelerisque. Massa
-                        placerat
-                      </p>
-                    </div>
-                    <div class="itemStart pt-3">
-                      <div class="flexy gap-x-3">
-                        <img
-                          src="assets/images/kathleen.png"
-                          class="img-fluid w-16"
-                          alt=""
-                        />
-                        <div class="itemStart flex-col space-y-0">
-                          <h4 class="font-semibold text-lg">Kathleen Smith</h4>
-                          <span>Data quality manager</span>
-                        </div>
+                    <div class="accordion-item">
+                      <button id="accordion-button-3" aria-expanded="false">
+                        <span class="accordion-title"
+                          >Can I request special cleaning tasks?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          You can book a cleaning by calling (702) 542-6044 or
+                          emailing us at
+                          <b>fragelacleaningservice@yahoo.com.</b>
+                        </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="slicki mx-2">
-                  <div
-                    class="itemStart border border-gray-200 flex-col w-full rounded-xl p-4 space-y-5"
-                  >
-                    <div class="itemStart gap-x-1 text-yellow-500">
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                    </div>
-                    <div class="itemStart">
-                      <p>
-                        Posuere sollicitudin aliquam ultrices sagittis orci a
-                        scelerisque. Massa placerat duis ultricies lacus turpis.
-                        pellentesque habitant morbil. Posuere sollicitudin
-                        aliquam ultrices sagittis orci a scelerisque. Massa
-                        placerat
-                      </p>
-                    </div>
-                    <div class="itemStart pt-3">
-                      <div class="flexy gap-x-3">
-                        <img
-                          src="assets/images/kathleen.png"
-                          class="img-fluid w-16"
-                          alt=""
-                        />
-                        <div class="itemStart flex-col space-y-0">
-                          <h4 class="font-semibold text-lg">Kathleen Smith</h4>
-                          <span>Data quality manager</span>
-                        </div>
+                    <div class="accordion-item">
+                      <button id="accordion-button-4" aria-expanded="false">
+                        <span class="accordion-title"
+                          >Do you offer one-time cleaning or recurring
+                          services?</span
+                        ><span class="icon" aria-hidden="true"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          You can book a cleaning by calling (702) 542-6044 or
+                          emailing us at
+                          <b>fragelacleaningservice@yahoo.com.</b>
+                        </p>
                       </div>
                     </div>
                   </div>
