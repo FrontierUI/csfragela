@@ -65,6 +65,20 @@ $('.reviewSlider').slick({
   ],
 });
 
+$(document).ready(function () {
+  $('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    focusOnSelect: true,
+  });
+
+  $('.slider-nav img').on('click', function () {
+    const fullImg = $(this).data('full');
+    $('#main-image').attr('src', fullImg);
+  });
+});
+
 // Accordions faq
 
 const items = document.querySelectorAll('.accordion button');
